@@ -1,0 +1,51 @@
+FOTOS DE LOS PERSONAJES
+=======================
+
+Poné acá las fotos. No hace falta tocar la base de datos ni el código.
+
+CÓMO NOMBRAR CADA ARCHIVO
+  El nombre del archivo es el "slug" del personaje + la extensión.
+  Ejemplo:  june-osborne.jpg
+
+  Formatos aceptados: .jpg  .jpeg  .png  .webp
+  Las mayúsculas del nombre no importan (June-Osborne.JPG también funciona).
+  Si hay dos archivos del mismo personaje se usa el primero de la lista de formatos.
+
+DESPUÉS DE COPIAR UNA FOTO
+  Recargá la página en el navegador. No hace falta reiniciar nada.
+  Para quitar una foto, borrá el archivo: vuelven a verse las iniciales.
+
+CÓMO SE VEN
+  Ficha del personaje:   retrato vertical (proporción 3:4).
+  Tarjetas del listado:  miniatura vertical (3:4).
+  Si tu foto tiene otra proporción, se recorta al centro.
+  Recomendado: vertical, unos 600 x 800 px, menos de 300 KB.
+
+DERECHOS
+  Usá solo imágenes sobre las que tengas derechos.
+
+NOMBRES DE ARCHIVO DE LOS PERSONAJES ACTUALES
+  alma.jpg                  ← Alma
+  beth.jpg                  ← Beth
+  cora.jpg                  ← Cora
+  eden-spencer.jpg          ← Eden Spencer
+  eleanor-lawrence.jpg      ← Eleanor Lawrence
+  emily-malek.jpg           ← Dr. Emily Malek
+  fred-waterford.jpg        ← Fred Waterford
+  gabriel-wharton.jpg       ← Gabriel Wharton
+  janine-lindo.jpg          ← Janine Lindo
+  joseph-lawrence.jpg       ← Joseph Lawrence
+  june-osborne.jpg          ← June Osborne
+  luke-bankole.jpg          ← Luke Bankole
+  lydia-clements.jpg        ← Lydia Clements
+  mark-tuello.jpg           ← Mark Tuello
+  moira-strand.jpg          ← Moira Strand
+  naomi-putnam.jpg          ← Naomi Putnam
+  nick-blaine.jpg           ← Nick Blaine
+  rita-blue.jpg             ← Rita Blue
+  rose-blaine.jpg           ← Rose Blaine
+  serena-joy-waterford.jpg  ← Serena Joy Waterford
+  sylvia.jpg                ← Sylvia
+  warren-putnam.jpg         ← Warren Putnam
+
+Para un personaje nuevo, el slug es el que le pongas en seed.sql.

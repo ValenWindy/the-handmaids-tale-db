@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0b0b0c;           /* fondo */
+  --color-panel: #151516;         /* tarjetas */
+  --color-line: #2a2a2c;          /* bordes */
+  --color-bone: #e8e6e3;          /* texto principal */
+  --color-muted: #8f8d8a;         /* texto secundario */
+  --color-gilead: #7a1818;        /* rojo oscuro */
+  --color-gilead-bright: #b02a2a; /* rojo para texto y hover */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+}
+
+/* Indicador de foco visible al navegar con teclado (los inputs mantienen el suyo) */
+:focus-visible {
+  outline: 2px solid var(--color-gilead-bright);
+  outline-offset: 2px;
+}
