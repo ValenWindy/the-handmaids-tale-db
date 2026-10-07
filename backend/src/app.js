@@ -10,6 +10,16 @@ const app = express()
 
 app.use(express.json())
 
+// CORS: hace falta porque el frontend (Netlify) está en otro dominio que el backend (Render).
+// En Render definí FRONTEND_URL=https://tu-sitio.netlify.app  (sin barra final)
+if (process.env.FRONTEND_URL) {
+  app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', process.env.FRONTEND_URL)
+    res.header('Vary', 'Origin')
+    next()
+  })
+}
+
 // Fotos de los personajes. Solo se sirven archivos de imagen, nada más de la carpeta.
 app.use(
   '/images/characters',
