@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import StatusBadge from '../ui/StatusBadge.jsx'
+import SectionHeading from '../ui/SectionHeading.jsx'
 import CharacterRelationships from './CharacterRelationships.jsx'
 import useLanguage from '../../hooks/useLanguage.js'
 import { fullName, handmaidLabel, initials, pickDescription } from '../../utils/characters.js'
@@ -79,17 +80,17 @@ export default function CharacterInfo({ character }) {
           <div className="border-t border-line" />
         </dl>
 
-        <section className="mt-10">
-          <h2 className="font-display text-2xl">{t('detail.description')}</h2>
+        <section className="mt-12">
+          <SectionHeading>{t('detail.description')}</SectionHeading>
           {description.text ? (
             <>
-              <p className="mt-3 max-w-prose leading-relaxed">{description.text}</p>
+              <p className="max-w-prose leading-relaxed">{description.text}</p>
               {description.isFallback && (
                 <p className="mt-2 text-xs text-muted">{t('detail.descriptionFallback')}</p>
               )}
             </>
           ) : (
-            <p className="mt-3 text-muted">{t('detail.noDescription')}</p>
+            <p className="text-muted">{t('detail.noDescription')}</p>
           )}
         </section>
 

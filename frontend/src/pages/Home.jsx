@@ -12,17 +12,31 @@ export default function Home() {
 
   return (
     <section className="py-16">
-      <p className="text-xs uppercase tracking-[0.3em] text-gilead-bright">
-        The Handmaid's Tale
-      </p>
-      <h1 className="mt-3 font-display text-5xl sm:text-6xl">Character Database</h1>
-      <p className="mt-6 max-w-xl text-muted">{t('home.description')}</p>
-      <Link
-        to="/characters"
-        className="mt-10 inline-block border border-gilead px-6 py-3 text-sm uppercase tracking-widest transition-colors hover:bg-gilead"
-      >
-        {t('home.cta')}
-      </Link>
+      <div className="grid items-center gap-12 md:grid-cols-[1fr_auto]">
+        <div>
+          <p className="text-xs uppercase tracking-[0.3em] text-gilead-bright">
+            The Handmaid's Tale
+          </p>
+          <h1 className="mt-3 font-display text-5xl sm:text-6xl">Character Database</h1>
+          <p className="mt-6 max-w-xl text-muted">{t('home.description')}</p>
+          <Link
+            to="/characters"
+            className="mt-10 inline-block border border-gilead px-6 py-3 text-sm uppercase tracking-widest transition-colors hover:bg-gilead"
+          >
+            {t('home.cta')}
+          </Link>
+        </div>
+
+        {/* Ilustración decorativa: solo desde pantallas medianas, donde sobra espacio.
+            El archivo está en frontend/public/icon.jpg. */}
+        <img
+          src="/icon.jpg"
+          alt=""
+          width="700"
+          height="990"
+          className="hidden w-64 border border-line md:block lg:w-72"
+        />
+      </div>
 
       <div className="mt-16 border-t border-line pt-8">
         {loading && <LoadingState variant="inline" />}

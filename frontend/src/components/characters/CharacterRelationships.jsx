@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import SectionHeading from '../ui/SectionHeading.jsx'
 import useLanguage from '../../hooks/useLanguage.js'
 import { fullName } from '../../utils/characters.js'
 
@@ -13,13 +14,13 @@ export default function CharacterRelationships({ relationships }) {
   const location = useLocation()
 
   return (
-    <section className="mt-10">
-      <h2 className="font-display text-2xl">{t('detail.relationships')}</h2>
+    <section className="mt-12">
+      <SectionHeading>{t('detail.relationships')}</SectionHeading>
 
       {relationships.length === 0 ? (
-        <p className="mt-3 text-muted">{t('detail.noRelationships')}</p>
+        <p className="text-muted">{t('detail.noRelationships')}</p>
       ) : (
-        <ul className="mt-4 divide-y divide-line border-y border-line">
+        <ul className="divide-y divide-line border-y border-line">
           {relationships.map((rel) => (
             <li key={`${rel.slug}-${rel.type}-${rel.direction}`}>
               <Link
